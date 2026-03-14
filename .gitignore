@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+*.ok_history
+*.bak
+*.dat
+*.dir
+*.ok_consent
+*.ok_disabled
