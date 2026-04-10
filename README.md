@@ -7,7 +7,4 @@ completed disc00 lab00 Function videos
 completed hw01
 
 2026/04/10
-completed control(vedio) textbook 1.4 1.5
-
-
-
+completed control(vedio) textbook 1.4 1.5 lab01
