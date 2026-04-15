@@ -8,3 +8,6 @@ completed hw01
 
 2026/04/10
 completed control(vedio) textbook 1.4 1.5 lab01
+
+2025/04/16
+completed Higher-order function(vedio) textbook 1.6(1.6.2 functions as general methods)
