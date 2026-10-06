@@ -39,7 +39,9 @@ def boar_brawl(player_score, opponent_score):
     opponent_score:   The total score of the other player.
 
     """
-    "*** YOUR CODE HERE ***"
+    opponent_tens = opponent_score // 10 % 10
+    player_ones = player_score % 10
+    return max(3*(abs(opponent_tens - player_ones)),1)
 
 
 def take_turn(num_rolls, player_score, opponent_score, dice=six_sided):
