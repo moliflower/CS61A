@@ -27,7 +27,7 @@ def roll_dice(num_rolls, dice=six_sided):
             sow_sad = True
         total = outcome + total
         num_rolls = num_rolls - 1
-    if sow_sad == 1:
+    if sow_sad:
         return 1
     return total
         
@@ -57,7 +57,9 @@ def take_turn(num_rolls, player_score, opponent_score, dice=six_sided):
     assert type(num_rolls) == int, "num_rolls must be an integer."
     assert num_rolls >= 0, "Cannot roll a negative number of dice in take_turn."
     assert num_rolls <= 10, "Cannot roll more than 10 dice."
-    "*** YOUR CODE HERE ***"
+    if num_rolls == 0:
+        return boar_brawl(player_score, opponent_score)
+    return roll_dice(num_rolls, dice)
 
 
 def simple_update(num_rolls, player_score, opponent_score, dice=six_sided):
