@@ -20,8 +20,17 @@ def roll_dice(num_rolls, dice=six_sided):
     # These assert statements ensure that num_rolls is a positive integer.
     assert type(num_rolls) == int, "num_rolls must be an integer."
     assert num_rolls > 0, "Must roll at least once."
-    "*** YOUR CODE HERE ***"
-
+    sow_sad, total = False, 0
+    while num_rolls > 0:
+        outcome = dice()
+        if outcome == 1:
+            sow_sad = True
+        total = outcome + total
+        num_rolls = num_rolls - 1
+    if sow_sad == 1:
+        return 1
+    return total
+        
 
 def boar_brawl(player_score, opponent_score):
     """Return the points scored when the current player rolls 0 dice according to Boar Brawl.
