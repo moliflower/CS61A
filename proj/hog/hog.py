@@ -148,8 +148,18 @@ def play(strategy0, strategy1, update, score0=0, score1=0, dice=six_sided, goal=
     goal:      The game ends and someone wins when this score is reached.
     """
     who = 0  # Who is about to take a turn, 0 (first) or 1 (second)
-    "*** YOUR CODE HERE ***"
-    return score0, score1
+    while True:
+        if who == 0:
+            num_rolls = strategy0(score0,score1)
+            score0 = update(num_rolls,score0,score1,dice)
+            if score0 >= goal:
+                return score0,score1
+        else:
+            num_rolls = strategy1(score1,score0)
+            score1 = update(num_rolls,score1,score0,dice)
+            if score1 >= goal:
+                return score0,score1
+        who = 1 - who
 
 
 #######################
